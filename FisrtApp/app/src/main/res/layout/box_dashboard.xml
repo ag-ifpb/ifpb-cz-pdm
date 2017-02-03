@@ -16,14 +16,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00000000"
-            android:text="Bate-Papo"/>
+            android:text="@string/btn_chat"
+            android:id="@+id/tab_chat"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#55888888"
-            android:text="Missões"/>
+            android:text="@string/btn_missions"
+            android:id="@+id/tab_missions"/>
 
     </LinearLayout>
 
@@ -34,21 +36,92 @@
 
         <!-- Tab: Bate-Papo -->
         <LinearLayout
+            android:id="@+id/tab_frame_chat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <!-- Conteúdo da aba Bate-Papo aqui -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abriu aqui"/>
 
         </LinearLayout>
 
         <!-- Tab: Missão -->
         <LinearLayout
+            android:id="@+id/tab_frame_missions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <!-- Conteúdo da aba Missão aqui -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_new_mission"
+                    android:id="@+id/button"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/ic_work"
+                    android:lines="4"
+                    android:paddingTop="25dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_old_mission"
+                    android:id="@+id/button2"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/ic_work_check"
+                    android:lines="4"
+                    android:paddingTop="25dp"
+                    android:singleLine="false"
+                    android:forceHasOverlappingRendering="false"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_settings"
+                    android:id="@+id/button3"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/ic_settings"
+                    android:elegantTextHeight="true"
+                    android:lines="4"
+                    android:paddingTop="25dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_gallery"
+                    android:id="@+id/button4"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/ic_view_quilt"
+                    android:lines="4"
+                    android:paddingTop="25dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

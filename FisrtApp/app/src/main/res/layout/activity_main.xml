@@ -9,7 +9,6 @@
     android:gravity="center"
     tools:context="pdm.agifpb.firstapp.MainActivity">
 
-
     <include layout="@layout/box_logo" />
 
     <include layout="@layout/box_dashboard" />
