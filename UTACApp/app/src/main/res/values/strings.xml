@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UTACApp</string>
+    <string name="activity_main_label">Painel de Controle</string>
+</resources>

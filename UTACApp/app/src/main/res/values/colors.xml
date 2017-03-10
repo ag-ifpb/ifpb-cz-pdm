@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#44c131</color>
+    <color name="colorTransparent">#00000000</color>
+    <!-- -->
+    <color name="textColorPrimary">#ffffff</color>
+    <!-- -->
+    <color name="boxBackgroundColor">#55000000</color>
+    <color name="boxFrameActiveBackgroundColor">#55888888</color>
+    <color name="boxButtonActiveBackgroundColor">#55888888</color>
+    <color name="boxButtonInactiveBackgroundColor">#00000000</color>
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boxBackgroundColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/boxButtonInactiveBackgroundColor"
+            android:textSize="@dimen/text_subtitle"
+            android:text="Bate-Papo"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/boxButtonActiveBackgroundColor"
+            android:textSize="@dimen/text_subtitle"
+            android:text="Missões"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boxFrameActiveBackgroundColor">
+
+        <!-- Tab: Bate-Papo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Conteúdo da aba Bate-Papo aqui -->
+
+        </LinearLayout>
+
+        <!-- Tab: Missão -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/newMissionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nova Missão"
+                    android:drawableTop="@mipmap/ic_work"
+                    android:background="@color/colorTransparent"/>
+
+                <Button
+                    android:id="@+id/oldMissionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Missões Anteriores"
+                    android:drawableTop="@mipmap/ic_work_check"
+                    android:background="@color/colorTransparent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/configurationButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Configurações"
+                    android:drawableTop="@mipmap/ic_settings"
+                    android:background="@color/colorTransparent"
+                    />
+
+                <Button
+                    android:id="@+id/galleryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Galeria de Fotos"
+                    android:drawableTop="@mipmap/ic_view_quilt"
+                    android:background="@color/colorTransparent"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

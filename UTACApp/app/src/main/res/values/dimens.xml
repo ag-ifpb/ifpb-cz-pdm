@@ -1,0 +1,12 @@
+<resources>
+    <!-- internal margin -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- logo box margins -->
+    <dimen name="logo_box_bottom_margin">20dp</dimen>
+    <dimen name="logo_box_top_margin">15dp</dimen>
+    <!-- text dimensions -->
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_title_small">10sp</dimen>
+    <dimen name="text_subtitle">14sp</dimen>
+</resources>

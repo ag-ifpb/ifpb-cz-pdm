@@ -40,13 +40,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <!-- Conteúdo da aba Bate-Papo aqui -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Abriu aqui"/>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<include layout="@layout/box_listitem" />-->
+                <!--<include layout="@layout/box_listitem" />-->
+
+            <!--</LinearLayout>-->
+
+            <ListView
+                android:id="@+id/listViewChatItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
 
         </LinearLayout>
 
@@ -55,7 +69,8 @@
             android:id="@+id/tab_frame_missions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <!-- Conteúdo da aba Missão aqui -->
 
