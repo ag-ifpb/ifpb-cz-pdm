@@ -38,9 +38,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <!-- Conteúdo da aba Bate-Papo aqui -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Aqui ficará o chat"/>
 
         </LinearLayout>
 
@@ -48,7 +53,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,18 +67,18 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nova Missão"
+                    android:background="@color/colorTransparent"
                     android:drawableTop="@mipmap/ic_work"
-                    android:background="@color/colorTransparent"/>
+                    android:text="Nova Missão"/>
 
                 <Button
                     android:id="@+id/oldMissionButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Missões Anteriores"
+                    android:background="@color/colorTransparent"
                     android:drawableTop="@mipmap/ic_work_check"
-                    android:background="@color/colorTransparent"/>
+                    android:text="Missões Anteriores"/>
 
             </LinearLayout>
 
@@ -87,9 +93,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Configurações"
-                    android:drawableTop="@mipmap/ic_settings"
                     android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_settings"
+                    android:text="Configurações"
                     />
 
                 <Button
@@ -97,9 +103,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Galeria de Fotos"
-                    android:drawableTop="@mipmap/ic_view_quilt"
                     android:background="@color/colorTransparent"
+                    android:drawableTop="@mipmap/ic_view_quilt"
+                    android:text="Galeria de Fotos"
                     />
 
             </LinearLayout>

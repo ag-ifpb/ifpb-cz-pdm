@@ -5,7 +5,8 @@
     <color name="colorAccent">#44c131</color>
     <color name="colorTransparent">#00000000</color>
     <!-- -->
-    <color name="textColorPrimary">#ffffff</color>
+    <!--<color name="textColorPrimary">#ffffff</color>-->
+    <color name="textColorPrimary">#000000</color>
     <!-- -->
     <color name="boxBackgroundColor">#55000000</color>
     <color name="boxFrameActiveBackgroundColor">#55888888</color>
