@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">FirstApp</string>
-    <string name="btn_chat">Bate Papo</string>
-    <string name="btn_missions">Missões</string>
-    <string name="btn_new_mission">Nova Missão</string>
-    <string name="btn_old_mission">Missões Anteriores</string>
-    <string name="btn_settings">Configurações</string>
-    <string name="btn_gallery">Galeria de Fotos</string>
-</resources>
