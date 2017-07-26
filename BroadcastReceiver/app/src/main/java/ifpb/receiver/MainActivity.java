@@ -1,6 +1,5 @@
 package ifpb.receiver;
 
-import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 
     @Override
@@ -64,19 +62,6 @@ public class MainActivity extends AppCompatActivity {
         lm.registerReceiver(receiver, new IntentFilter(MainReceiver.ACTION));
         //
         Log.d(TAG, "onCreate()");
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("txt", "Opa");
-        super.onSaveInstanceState(outState);
-        Log.d("AGDebug", "saving");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.d("AGDebug", "restoring: " + savedInstanceState.getString("txt"));
     }
 
     public void setNewText(String text) {

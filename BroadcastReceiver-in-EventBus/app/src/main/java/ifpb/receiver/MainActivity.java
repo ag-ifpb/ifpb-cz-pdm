@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         MainSingleton.getInstance().setHandler(new MyHandler(this));
         //
         receiver = new MainReceiver();
+        EventBus eventBus = EventBus.getInstance(this);
+        eventBus.registerReceiver(receiver, new IntentFilter(MainReceiver.ACTION));
         //
         Log.d(TAG, "onCreate()");
     }
@@ -84,18 +86,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume()");
-        //
-        EventBus eventBus = EventBus.getInstance(this);
-        eventBus.registerReceiver(receiver, new IntentFilter(MainReceiver.ACTION));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause()");
-        //
-        EventBus eventBus = EventBus.getInstance(this);
-        eventBus.unregisterReceiver(receiver);
     }
 
     @Override
@@ -114,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop()");
+        //
+        EventBus eventBus = EventBus.getInstance(this);
+        eventBus.unregisterReceiver(receiver);
     }
 
     @Override
