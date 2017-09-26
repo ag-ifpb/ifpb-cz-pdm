@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Minha Primeira Aplicação</h1>
+        <form id="fm">
+            <label for="" style="display:block">Nome</label>
+            <input name="nome" >
+            <label for=""  style="display:block">CPF</label>
+            <input name="cpf" >
+            <label for=""  style="display:block">Endereço</label>
+            <input name="endereco" >
+            <button type="submit"  style="display:block">Salvar</button>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            //recupera o elemento formulário
+            jQuery("#fm").submit(function(e){
+                //evitar que ocorra o padrão (submissão de dados)
+                e.preventDefault()
+                //recuperar os dados
+                var c = jQuery("#fm input[name=cpf]").val()
+                var n = jQuery("#fm input[name=nome]").val()
+                var e = jQuery("#fm input[name=endereco]").val()
+                //chamar os metodos da aplicação
+                app.save(c, n, e)
+                //
+                console.info(app.list())
+            })
+        </script>
+    </body>
+</html>

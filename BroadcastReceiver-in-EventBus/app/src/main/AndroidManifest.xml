@@ -20,13 +20,20 @@
 
         <service android:name=".MainService"/>
 
-        <receiver
-            android:name=".MainReceiver" >
+        <receiver android:name=".MainReceiver">
             <intent-filter>
-                <action android:name="kajshdfkjashdfkjhaskjfdhkjasf" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="kajshdfkjashdfkjhaskjfdhkjasf"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
+
+        <provider
+            android:name=".ContentProvider"
+            android:authorities="ag.ifpb"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>
