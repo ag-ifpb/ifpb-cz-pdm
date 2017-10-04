@@ -1,0 +1,1621 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" >
+<head>
+<title>Projeto de Extensão - SUAP: Sistema Unificado de Administração Pública</title>
+<meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"e537ca0145","agent":"","transactionName":"NQZXYEJYWhcHUkZRCgxMc0FeWkANCV8dSBcNCVBAX0oaEg9URUtfEhFaXlVNWw==","applicationID":"9236691","errorBeacon":"bam.nr-data.net","applicationTime":912}</script>
+<meta name="keywords" content="suap, administração, pública, mec, ifpb">
+<meta content="SUAP: Sistema Unificado de Administração Pública" name="description">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="NONE,NOARCHIVE">
+
+
+<link rel="shortcut icon" href="/static/comum/img/favicon.png" />
+
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.all.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.core.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.datepicker.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.theme.css" />
+
+
+<link rel="stylesheet" href="/static/djtools/jquery/jquery.autocomplete.css" />
+<link rel="stylesheet" href="/static/djtools/jstree/tree_component.css" />
+
+
+<link rel="stylesheet" href="/static/djtools/css/main.css" />
+<link rel="stylesheet" href="/static/djtools/css/icons.css" />
+
+
+<link rel="stylesheet" href="/static/comum/css/hint.min.css" />
+<link rel="stylesheet" href="/static/comum/css/estilo.css" />
+<link rel="stylesheet" href="/static/comum/css/forms.css" />
+
+
+
+
+<script src="/static/comum/js/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/static/djtools/tinybox/tinybox.css" />
+<script src="/static/djtools/tinybox/tinybox.js"></script>
+
+
+<script src="/static/comum/js/jquery.ui.custom.min.js"></script>
+<script src="/static/comum/js/jquery.ui.datepicker-pt-BR.js"></script>
+
+
+<script src="/static/comum/deprecated/js/jquery.autocomplete.js"></script>
+
+
+<script src="/static/comum/deprecated/js/jquery.form.js"></script>
+<script src="/static/comum/js/main.js"></script>
+<script src="/static/comum/deprecated/js/mascaras.js"></script>
+<script src="/static/comum/deprecated/js/auxiliar.js"></script>
+<script src="/static/comum/deprecated/js/suap.basico.js"></script>
+
+
+
+
+
+
+
+    <script>jQuery.getScript('/static/edu/js/tabs.js');</script>
+
+
+</head>
+
+<body class="">
+
+<div class="holder">
+    
+    <aside>
+        <header>   
+            <h1><a href="/" title="SUAP: Sistema Unificado de Administração Pública">SUAP</a></h1>
+            <a href="#" id="acoes" class="toggleSidebar">Mostrar/Esconder barra lateral</a>
+               
+                
+                    <div id="user-tools">
+                        
+                            <a href="/rh/servidor/1880852/">
+                                <div class="foto-circle small">
+                                    <img src="/static/comum/img/default.jpg" alt="Cicero Araujo" />
+                                </div>
+                                <span>Cicero Araujo</span>
+                            </a>
+                        
+                    </div>
+                
+            
+        </header>
+        
+            
+
+                <form id="__buscar_menu__" action="" onsubmit="return false;">
+                    <input type="text" placeholder="Buscar Item de Menu" id="__filterinput__"  />
+                </form>
+
+                
+                    <nav>
+                        <ul>
+                            <li class="menu-home"><a href="/">Início</a></li>
+                            <li class="has-child menu-administracao " id="menu-item-administracao-0"><a href="#" title="Administração">Administração</a><ul><li class="has-child " id="menu-item-almoxarifado-1"><a href="#" title="Almoxarifado">Almoxarifado</a><ul><li class="has-child " id="menu-item-requisicoes-2"><a href="#" title="Requisições">Requisições</a><ul><li class=" " id="menu-item-saida-de-material-para-consumo-3"><a href="/djtools/breadcrumbs_reset/saida-de-material-para-consumo-3/almoxarifado/form_requisicao_pessoa_pedido/" title="Saída de Material para Consumo">Saída de Material para Consumo</a></li></ul></li></ul></li><li class="has-child " id="menu-item-cadastros-4"><a href="#" title="Cadastros">Cadastros</a><ul><li class=" " id="menu-item-salas-5"><a href="/djtools/breadcrumbs_reset/salas-5/admin/comum/sala/" title="Salas">Salas</a></li></ul></li><li class="has-child " id="menu-item-contratos-6"><a href="#" title="Contratos">Contratos</a><ul><li class=" " id="menu-item-busca-avancada-7"><a href="/djtools/breadcrumbs_reset/busca-avancada-7/contratos/buscar_contrato/" title="Busca Avançada">Busca Avançada</a></li><li class="has-child " id="menu-item-relatorios-8"><a href="#" title="Relatórios">Relatórios</a><ul><li class=" " id="menu-item-pendencias-9"><a href="/djtools/breadcrumbs_reset/pendencias-9/contratos/relatorio_pendencias/" title="Pendências">Pendências</a></li><li class=" " id="menu-item-situacao-dos-contratos-10"><a href="/djtools/breadcrumbs_reset/situacao-dos-contratos-10/contratos/situacao_contratos/" title="Situação dos Contratos">Situação dos Contratos</a></li></ul></li></ul></li><li class="has-child " id="menu-item-diarias-e-passagens-11"><a href="#" title="Diárias e Passagens">Diárias e Passagens</a><ul><li class=" " id="menu-item-prestar-contas-12"><a href="/djtools/breadcrumbs_reset/prestar-contas-12/admin/expedicao/relatorioviagem/?tab=tab_meus_relatorios" title="Prestar Contas">Prestar Contas</a></li><li class=" " id="menu-item-substitutos-13"><a href="/djtools/breadcrumbs_reset/substitutos-13/admin/expedicao/substitutosetor/" title="Substitutos">Substitutos</a></li><li class=" " id="menu-item-viagem-14"><a href="/djtools/breadcrumbs_reset/viagem-14/admin/expedicao/viagemservidor/" title="Viagem">Viagem</a></li></ul></li><li class=" " id="menu-item-enquetes-15"><a href="/djtools/breadcrumbs_reset/enquetes-15/admin/enquete/enquete/" title="Enquetes">Enquetes</a></li><li class="has-child " id="menu-item-materiais-16"><a href="#" title="Materiais">Materiais</a><ul><li class=" " id="menu-item-materiais-17"><a href="/djtools/breadcrumbs_reset/materiais-17/admin/materiais/material/" title="Materiais">Materiais</a></li></ul></li><li class="has-child " id="menu-item-patrimonio-18"><a href="#" title="Patrimônio">Patrimônio</a><ul><li class=" " id="menu-item-inventarios-19"><a href="/djtools/breadcrumbs_reset/inventarios-19/patrimonio/inventario_busca/" title="Inventários">Inventários</a></li><li class=" " id="menu-item-requisicao-de-equipamentos-20"><a href="/djtools/breadcrumbs_reset/requisicao-de-equipamentos-20/patrimonio/requisicao_inventario_uso_pessoal_listar/" title="Requisição de Equipamentos">Requisição de Equipamentos</a></li></ul></li><li class="has-child " id="menu-item-protocolo-21"><a href="#" title="Protocolo">Protocolo</a><ul><li class=" " id="menu-item-caixa-de-entrada-e-saida-22"><a href="/djtools/breadcrumbs_reset/caixa-de-entrada-e-saida-22/protocolo/caixa_entrada_saida/" title="Caixa de Entrada e Saída">Caixa de Entrada e Saída</a></li><li class=" " id="menu-item-caixa-de-tramitacao-externa-23"><a href="/djtools/breadcrumbs_reset/caixa-de-tramitacao-externa-23/protocolo/caixa_tramitacao_externa/" title="Caixa de Tramitação Externa">Caixa de Tramitação Externa</a></li><li class=" " id="menu-item-processos-24"><a href="/djtools/breadcrumbs_reset/processos-24/admin/protocolo/processo/" title="Processos">Processos</a></li></ul></li><li class="has-child " id="menu-item-reservas-de-salas-25"><a href="#" title="Reservas de Salas">Reservas de Salas</a><ul><li class=" " id="menu-item-salas-26"><a href="/djtools/breadcrumbs_reset/salas-26/admin/comum/sala/?agendavel__exact=1" title="Salas">Salas</a></li><li class=" " id="menu-item-solicitacoes-de-reserva-27"><a href="/djtools/breadcrumbs_reset/solicitacoes-de-reserva-27/admin/comum/solicitacaoreservasala/" title="Solicitações de Reserva">Solicitações de Reserva</a></li></ul></li></ul></li><li class="menu-atividades-estudantis " id="menu-item-atividades-estudantis-28"><a href="#" title="Atividades Estudantis">Atividades Estudantis</a></li><li class="has-child menu-des-institucional " id="menu-item-des-institucional-29"><a href="#" title="Des. Institucional">Des. Institucional</a><ul><li class="has-child " id="menu-item-planejamento-30"><a href="#" title="Planejamento">Planejamento</a><ul><li class="has-child " id="menu-item-relatorios-31"><a href="#" title="Relatórios">Relatórios</a><ul><li class=" " id="menu-item-detalhamento-dos-campi-32"><a href="/djtools/breadcrumbs_reset/detalhamento-dos-campi-32/planejamento/relatorio/detalhamento/" title="Detalhamento dos Campi">Detalhamento dos Campi</a></li></ul></li></ul></li></ul></li><li class="has-child menu-ensino " id="menu-item-ensino-33"><a href="#" title="Ensino">Ensino</a><ul><li class="has-child " id="menu-item-alunos-e-professores-34"><a href="#" title="Alunos e Professores">Alunos e Professores</a><ul><li class=" " id="menu-item-alunos-35"><a href="/djtools/breadcrumbs_reset/alunos-35/admin/edu/aluno/correntes" title="Alunos">Alunos</a></li></ul></li><li class="has-child " id="menu-item-atividades-docentes-36"><a href="#" title="Atividades Docentes">Atividades Docentes</a><ul><li class=" " id="menu-item-avaliacoes-de-mapa-de-atividades-37"><a href="/djtools/breadcrumbs_reset/avaliacoes-de-mapa-de-atividades-37/admin/atividades_docente/avaliacao/" title="Avaliações de Mapa de Atividades">Avaliações de Mapa de Atividades</a></li><li class=" " id="menu-item-mapa-de-atividades-38"><a href="/djtools/breadcrumbs_reset/mapa-de-atividades-38/admin/atividades_docente/mapaatividades/" title="Mapa de Atividades">Mapa de Atividades</a></li></ul></li><li class="has-child " id="menu-item-comunicador-39"><a href="#" title="Comunicador">Comunicador</a><ul><li class=" " id="menu-item-caixa-de-saida-40"><a href="/djtools/breadcrumbs_reset/caixa-de-saida-40/admin/edu/mensagemsaida/" title="Caixa de Saída">Caixa de Saída</a></li><li class=" " id="menu-item-nova-mensagem-41"><a href="/djtools/breadcrumbs_reset/nova-mensagem-41/edu/enviar_mensagem/" title="Nova Mensagem">Nova Mensagem</a></li></ul></li><li class="has-child " id="menu-item-ead-42"><a href="#" title="EAD">EAD</a><ul><li class="has-child " id="menu-item-processos-digitalizados-43"><a href="#" title="Processos Digitalizados">Processos Digitalizados</a><ul><li class=" " id="menu-item-documentos-44"><a href="/djtools/breadcrumbs_reset/documentos-44/admin/sad/documento/" title="Documentos">Documentos</a></li></ul></li></ul></li><li class="has-child " id="menu-item-meus-diarios-45"><a href="#" title="Meus Diários">Meus Diários</a><ul><li class=" " id="menu-item-locais-e-horarios-de-aula-46"><a href="/djtools/breadcrumbs_reset/locais-e-horarios-de-aula-46/edu/locais_aula_professor/" title="Locais e Horários de Aula">Locais e Horários de Aula</a></li><li class=" " id="menu-item-materiais-de-aula-47"><a href="/djtools/breadcrumbs_reset/materiais-de-aula-47/admin/edu/materialaula/" title="Materiais de Aula">Materiais de Aula</a></li><li class=" " id="menu-item-meus-diarios-48"><a href="/djtools/breadcrumbs_reset/meus-diarios-48/edu/meus_diarios/" title="Meus Diários">Meus Diários</a></li></ul></li><li class="has-child " id="menu-item-relatorios-e-estatisticas-49"><a href="#" title="Relatórios e Estatísticas">Relatórios e Estatísticas</a><ul><li class=" " id="menu-item-estatisticas-50"><a href="/djtools/breadcrumbs_reset/estatisticas-50/edu/estatistica/" title="Estatísticas">Estatísticas</a></li><li class=" " id="menu-item-listagem-de-alunos-51"><a href="/djtools/breadcrumbs_reset/listagem-de-alunos-51/edu/relatorio/" title="Listagem de Alunos">Listagem de Alunos</a></li><li class=" " id="menu-item-listagem-de-diarios-52"><a href="/djtools/breadcrumbs_reset/listagem-de-diarios-52/edu/relatorio_diario/" title="Listagem de Diários">Listagem de Diários</a></li><li class=" " id="menu-item-listagem-de-professores-53"><a href="/djtools/breadcrumbs_reset/listagem-de-professores-53/edu/relatorio_professor/" title="Listagem de Professores">Listagem de Professores</a></li><li class=" " id="menu-item-relatorio-ead-54"><a href="/djtools/breadcrumbs_reset/relatorio-ead-54/edu/relatorio_ead/" title="Relatório EAD">Relatório EAD</a></li><li class=" " id="menu-item-relatorio-de-desempenho-de-alunos-55"><a href="/djtools/breadcrumbs_reset/relatorio-de-desempenho-de-alunos-55/edu/relatorio_desempenho_alunos/" title="Relatório de Desempenho de Alunos">Relatório de Desempenho de Alunos</a></li><li class=" " id="menu-item-relatorio-de-faltas-56"><a href="/djtools/breadcrumbs_reset/relatorio-de-faltas-56/edu/relatorio_faltas/" title="Relatório de Faltas">Relatório de Faltas</a></li><li class=" " id="menu-item-relatorio-de-periodos-nao-fechados-57"><a href="/djtools/breadcrumbs_reset/relatorio-de-periodos-nao-fechados-57/edu/relatorio_periodos_abertos/" title="Relatório de Períodos Não-Fechados">Relatório de Períodos Não-Fechados</a></li></ul></li></ul></li><li class="has-child menu-extensao " id="menu-item-extensao-58"><a href="#" title="Extensão">Extensão</a><ul><li class="has-child " id="menu-item-projetos-59"><a href="#" title="Projetos">Projetos</a><ul><li class=" " id="menu-item-meus-projetos-60"><a href="/djtools/breadcrumbs_reset/meus-projetos-60/projetos/meus_projetos/extensao/" title="Meus Projetos">Meus Projetos</a></li><li class=" " id="menu-item-submeter-projetos-61"><a href="/djtools/breadcrumbs_reset/submeter-projetos-61/projetos/editais_abertos/extensao/" title="Submeter Projetos">Submeter Projetos</a></li></ul></li></ul></li><li class="has-child menu-gestao-de-pessoas " id="menu-item-gestao-de-pessoas-62"><a href="#" title="Gestão de Pessoas">Gestão de Pessoas</a><ul><li class="has-child " id="menu-item-ferias-63"><a href="#" title="Férias">Férias</a><ul><li class=" " id="menu-item-calendario-de-ferias-do-setor-64"><a href="/djtools/breadcrumbs_reset/calendario-de-ferias-do-setor-64/ferias/calendario_ferias_setor" title="Calendário de Férias do Setor">Calendário de Férias do Setor</a></li><li class=" " id="menu-item-listagem-de-ferias-65"><a href="/djtools/breadcrumbs_reset/listagem-de-ferias-65/ferias/ferias/" title="Listagem de Férias">Listagem de Férias</a></li></ul></li><li class="has-child " id="menu-item-ponto-66"><a href="#" title="Ponto">Ponto</a><ul><li class="has-child " id="menu-item-frequencia-67"><a href="#" title="Frequência">Frequência</a><ul><li class=" " id="menu-item-frequencias-inconsistentes-por-setor-68"><a href="/djtools/breadcrumbs_reset/frequencias-inconsistentes-por-setor-68/ponto/frequencias_inconsistentes_setor/" title="Frequências Inconsistentes por Setor">Frequências Inconsistentes por Setor</a></li><li class=" " id="menu-item-frequencias-de-terceirizados-69"><a href="/djtools/breadcrumbs_reset/frequencias-de-terceirizados-69/ponto/frequencia_terceirizados/" title="Frequências de Terceirizados">Frequências de Terceirizados</a></li><li class=" " id="menu-item-frequencias-por-funcionario-70"><a href="/djtools/breadcrumbs_reset/frequencias-por-funcionario-70/ponto/frequencia_funcionario/" title="Frequências por Funcionário">Frequências por Funcionário</a></li><li class=" " id="menu-item-frequencias-por-setor-71"><a href="/djtools/breadcrumbs_reset/frequencias-por-setor-71/ponto/frequencia_setor/" title="Frequências por Setor">Frequências por Setor</a></li></ul></li><li class=" " id="menu-item-observacoes-72"><a href="/djtools/breadcrumbs_reset/observacoes-72/admin/ponto/observacao/" title="Observações">Observações</a></li></ul></li><li class="has-child " id="menu-item-progressoes-73"><a href="#" title="Progressões">Progressões</a><ul><li class="has-child " id="menu-item-tecnicos-administrativos-74"><a href="#" title="Técnicos Administrativos">Técnicos Administrativos</a><ul><li class=" " id="menu-item-meus-processos-75"><a href="/djtools/breadcrumbs_reset/meus-processos-75/progressoes/meus_processos/" title="Meus Processos">Meus Processos</a></li><li class=" " id="menu-item-minhas-avaliacoes-76"><a href="/djtools/breadcrumbs_reset/minhas-avaliacoes-76/progressoes/minhas_avaliacoes/" title="Minhas Avaliações">Minhas Avaliações</a></li></ul></li></ul></li><li class="has-child " id="menu-item-rsc-77"><a href="#" title="RSC">RSC</a><ul><li class=" " id="menu-item-meus-processos-78"><a href="/djtools/breadcrumbs_reset/meus-processos-78/admin/rsc/processorsc/?tab=tab_meus_processos" title="Meus Processos">Meus Processos</a></li></ul></li><li class="has-child " id="menu-item-remanejamento-79"><a href="#" title="Remanejamento">Remanejamento</a><ul><li class=" " id="menu-item-inscricoes-80"><a href="/djtools/breadcrumbs_reset/inscricoes-80/admin/remanejamento/inscricao/" title="Inscrições">Inscrições</a></li><li class=" " id="menu-item-recursos-ao-edital-81"><a href="/djtools/breadcrumbs_reset/recursos-ao-edital-81/admin/remanejamento/editalrecurso/" title="Recursos ao Edital">Recursos ao Edital</a></li></ul></li><li class="has-child " id="menu-item-remocao-82"><a href="#" title="Remoção">Remoção</a><ul><li class=" " id="menu-item-editais-83"><a href="/djtools/breadcrumbs_reset/editais-83/admin/remocao/edital/" title="Editais">Editais</a></li><li class=" " id="menu-item-indeferimentos-de-inscricoes-84"><a href="/djtools/breadcrumbs_reset/indeferimentos-de-inscricoes-84/admin/remocao/justificativaindeferimento/" title="Indeferimentos de Inscrições">Indeferimentos de Inscrições</a></li><li class=" " id="menu-item-inscricoes-85"><a href="/djtools/breadcrumbs_reset/inscricoes-85/admin/remocao/inscricao/" title="Inscrições">Inscrições</a></li><li class=" " id="menu-item-pareceres-de-recursos-86"><a href="/djtools/breadcrumbs_reset/pareceres-de-recursos-86/admin/remocao/parecerrecurso/" title="Pareceres de recursos">Pareceres de recursos</a></li><li class=" " id="menu-item-recursos-87"><a href="/djtools/breadcrumbs_reset/recursos-87/admin/remocao/recurso/" title="Recursos">Recursos</a></li></ul></li><li class="has-child " id="menu-item-ressarcimento-88"><a href="#" title="Ressarcimento">Ressarcimento</a><ul><li class=" " id="menu-item-reembolsos-89"><a href="/djtools/breadcrumbs_reset/reembolsos-89/admin/ressarcimento/reembolso/" title="Reembolsos">Reembolsos</a></li></ul></li><li class=" " id="menu-item-servidores-90"><a href="/djtools/breadcrumbs_reset/servidores-90/admin/rh/servidor/?excluido__exact=0" title="Servidores">Servidores</a></li><li class=" " id="menu-item-setores-91"><a href="/djtools/breadcrumbs_reset/setores-91/admin/rh/setor/?excluido__exact=0" title="Setores">Setores</a></li></ul></li><li class="has-child menu-pesquisa " id="menu-item-pesquisa-92"><a href="#" title="Pesquisa">Pesquisa</a><ul><li class="has-child " id="menu-item-competencias-93"><a href="#" title="Competências">Competências</a><ul><li class=" " id="menu-item-buscar-competencias-94"><a href="/djtools/breadcrumbs_reset/buscar-competencias-94/bi/" title="Buscar competencias">Buscar competencias</a></li><li class=" " id="menu-item-minhas-competencias-95"><a href="/djtools/breadcrumbs_reset/minhas-competencias-95/admin/competencias/bancocompetencia/" title="Minhas competencias">Minhas competencias</a></li></ul></li><li class="has-child " id="menu-item-declaracoes-96"><a href="#" title="Declarações">Declarações</a><ul><li class=" " id="menu-item-avaliador-de-projetos-97"><a href="/djtools/breadcrumbs_reset/avaliador-de-projetos-97/projetos/emitir_declaracao_avaliador/pesquisa" title="Avaliador de Projetos">Avaliador de Projetos</a></li></ul></li><li class="has-child " id="menu-item-projetos-98"><a href="#" title="Projetos">Projetos</a><ul><li class=" " id="menu-item-avaliar-projetos-99"><a href="/djtools/breadcrumbs_reset/avaliar-projetos-99/projetos/avaliacao/pesquisa/" title="Avaliar Projetos">Avaliar Projetos</a></li><li class=" " id="menu-item-meus-projetos-100"><a href="/djtools/breadcrumbs_reset/meus-projetos-100/projetos/meus_projetos/pesquisa/" title="Meus Projetos">Meus Projetos</a></li><li class="has-child " id="menu-item-relatorios-101"><a href="#" title="Relatórios">Relatórios</a><ul><li class=" " id="menu-item-lista-de-avaliadores-externos-102"><a href="/djtools/breadcrumbs_reset/lista-de-avaliadores-externos-102/admin/projetos/avaliadorexterno" title="Lista de Avaliadores Externos">Lista de Avaliadores Externos</a></li><li class=" " id="menu-item-lista-de-avaliadores-internos-103"><a href="/djtools/breadcrumbs_reset/lista-de-avaliadores-internos-103/projetos/listar_avaliadores/" title="Lista de Avaliadores Internos">Lista de Avaliadores Internos</a></li><li class=" " id="menu-item-lista-de-equipes-dos-projetos-104"><a href="/djtools/breadcrumbs_reset/lista-de-equipes-dos-projetos-104/projetos/listar_equipes_dos_projetos/" title="Lista de Equipes dos Projetos">Lista de Equipes dos Projetos</a></li></ul></li><li class=" " id="menu-item-submeter-projetos-105"><a href="/djtools/breadcrumbs_reset/submeter-projetos-105/projetos/editais_abertos/pesquisa/" title="Submeter Projetos">Submeter Projetos</a></li><li class=" " id="menu-item-tornar-se-avaliador-106"><a href="/djtools/breadcrumbs_reset/tornar-se-avaliador-106/projetos/tornar_avaliador/" title="Tornar-se Avaliador">Tornar-se Avaliador</a></li></ul></li></ul></li><li class="has-child menu-tec-da-informacao " id="menu-item-tec-da-informacao-107"><a href="#" title="Tec. da Informação">Tec. da Informação</a><ul><li class=" " id="menu-item-catalogo-de-servicos-108"><a href="/djtools/breadcrumbs_reset/catalogo-de-servicos-108/centralservicos/catalogo/" title="Catálogo de Serviços">Catálogo de Serviços</a></li><li class="has-child " id="menu-item-central-de-servicos-109"><a href="#" title="Central de Serviços">Central de Serviços</a><ul><li class=" " id="menu-item-abrir-chamado-110"><a href="/djtools/breadcrumbs_reset/abrir-chamado-110/centralservicos/selecionar_servico_abertura/" title="Abrir Chamado">Abrir Chamado</a></li><li class=" " id="menu-item-meus-chamados-111"><a href="/djtools/breadcrumbs_reset/meus-chamados-111/centralservicos/listar_chamados_usuario/?todos_status=on" title="Meus Chamados">Meus Chamados</a></li><li class=" " id="menu-item-perguntas-frequentes-112"><a href="/djtools/breadcrumbs_reset/perguntas-frequentes-112/centralservicos/perguntasfrequentes" title="Perguntas Frequentes">Perguntas Frequentes</a></li></ul></li><li class=" " id="menu-item-novidades-no-sistema-113"><a href="/djtools/breadcrumbs_reset/novidades-no-sistema-113/comum/novidades/" title="Novidades no Sistema">Novidades no Sistema</a></li></ul></li>
+                            <li class="menu-logout"><a href="/accounts/logout/">Sair</a></li>
+                        </ul>
+                    </nav>
+                
+            
+        
+    </aside>
+
+    <main class="colM" id="content">
+
+
+        
+
+        <div id="breadcrumbs">
+            
+              <a href="/">Início</a>  &nbsp;»&nbsp; 
+            
+              <a href="/projetos/meus_projetos/pesquisa/">Pesquisa</a>  &nbsp;»&nbsp; 
+            
+              <a href="/projetos/projeto/2858/">Projeto de Inovação</a>  &nbsp;»&nbsp; 
+            
+              <a href="/projetos/projeto/2849/">Projeto de Inovação</a>  &nbsp;»&nbsp; 
+            
+              <a href="/projetos/projeto/2848/">Projeto de Extensão</a> 
+            
+        </div>
+        
+        
+            <h2>Projeto de Extensão</h2>
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+<ul class="action-bar">
+
+    
+    
+    
+    
+    
+    
+</ul>
+
+
+<table class="info">
+    <tr>
+        <td>Título do Projeto</td>
+        <td>A MÚSICA COMO RESGATE SOCIAL: A EXPERIÊNCIA DO CORAL MENINOS E MENINAS DE LUCENA</td>
+    </tr>
+    <tr>
+        <td>Edital</td>
+        <td>Edital de Extensão nº04/2017 - PROGRAMA INSTITUCIONAL DE APOIO AO FORTALECIMENTO DOS NÚCLEOS DE EXTENSÃO DA “REDE RIZOMA IFPB: TECNOLOGIA EM EXTENSÃO” PRORIZOMA 2017: PROENEX</td>
+        <td>Período do Edital</td>
+        <td>
+            Execução
+        </td>
+        <td>Situação do Projeto</td>
+        <td>
+            <!-- O status "Selecionado" não pode ser revelado antes da data de divulgação. -->
+            
+                Em execução
+            
+        </td>
+    </tr>
+    <tr>
+        <td>Campus do Projeto</td>
+        <td>CAMPUS-CB</td>
+        
+            <td>Código da Atividade</td>
+            <td></td>
+        
+    </tr>
+</table>
+
+<div class="tab" data-title="Dados do Projeto">
+    
+    <div class="box " >
+	<h3>Dados do Projeto</h3>
+    <div>
+        <ul class="action-bar">
+            
+            <li></li>
+        </ul>
+        <table class="info">
+            <tr>
+                <td>Início da Execução</td>
+                <td>02/05/2017</td>
+            </tr>
+            <tr>
+                <td>Término da Execução</td>
+                <td>30/11/2017</td>
+            </tr>
+            
+                <tr>
+                    <td>Foco Tecnológico</td>
+                    <td>3. Artes Integradas</td>
+                </tr>
+            
+            <tr>
+                <td>Área do Conhecimento</td>
+                <td>ARTES (LINGUÍSTICA, LETRAS E ARTES)</td>
+            </tr>
+            <tr>
+                <td>Área Temática</td>
+                <td>Cultura</td>
+            </tr>
+            
+                <tr>
+                    <td>Tema</td>
+                    <td>-</td>
+                </tr>
+            
+            
+
+            
+            <tr>
+                <td>Seleção</td>
+                <td> <span class="status status-success">Sim</span></td>
+
+            </tr>
+            
+                <tr>
+                    <td>Data da Seleção</td>
+                    <td>
+                        
+                            
+                                17/05/2017
+                            
+                        
+                    </td>
+                </tr>
+                
+                    <tr>
+                        <td>Pontuação</td>
+                        
+                            <td>
+                                
+                                    96,00
+                                
+                            </td>
+                        
+                    </tr>
+                
+                <tr>
+                    <td>Data da Divulgação</td>
+                    <td>
+                    
+                        19/05/2017 18:00:00
+                    
+                    </td>
+                </tr>
+            
+        </table>
+    </div>
+</div>
+
+    <div class="box " >
+	<h3>Discriminação do Projeto</h3>
+    <div>
+        <table class="info">
+            
+                <tr>
+                    <td>Resumo</td>
+                    <td><p>O n&uacute;cleo de extens&atilde;o DE M&Atilde;OS DADAS COM A COMUNIDADE: DESENVOLVENDO A&Ccedil;&Otilde;ES EDUCATIVAS NO MUNIC&Iacute;PIO DE CABEDELO- PB (DEMADC) tem o objetivo de capacitar as comunidades de Cabedelo, a partir do desenvolvimento de compet&ecirc;ncias multidisplinares dos discentes concluintes dos cursos t&eacute;cnicos integrados em pesca e recursos pesqueiros, quanto a cadeia do processamento de pescados/alimentos, desde a habilita&ccedil;&atilde;o dos manipuladores quanto a higieniza&ccedil;&atilde;o e elabora&ccedil;&atilde;o de produtos pesqueiros at&eacute; a reciclagem dos res&iacute;duos org&acirc;nicos pela compostagem, viabilizando a melhoria na qualidade de vida da comunidade por meio da inser&ccedil;&atilde;o no mercado de trabalho, melhorando, dessa forma, a renda familiar. Dessa forma, o N&uacute;cleo atende a v&aacute;rios parceiros, dentre eles o Instituto Mar de Esperan&ccedil;a, que mant&eacute;m o coral Meninos e Meninas de Lucena, com a finalidade de tirar crian&ccedil;as e jovens da marginalidade de Lucena atrav&eacute;s da m&uacute;sica, e ajudar as fam&iacute;lias desses jovens, de forma a proporcionar uma melhor qualidade de vida aos mesmos. Assim, o N&uacute;cleo de extens&atilde;o DEMADC, atendeu ao chamado desta comunidade e trabalha com a capacita&ccedil;&atilde;o das fam&iacute;lias dos participantes do coral. Devido ao trabalho exitoso deste parceiro na comunidade, achamos de extrema import&acirc;ncia compartilhar a experi&ecirc;ncia do mesmo no Encontro de arte Educadores do Nordeste, que ocorrer&aacute; durante o ENEX 2017, al&eacute;m de ofertar uma apresenta&ccedil;&atilde;o do Coral Meninos e Meninas de Lucena na abertura deste evento e recepcionando o grupo de participantes que ir&aacute; &agrave; Lucena por meio da balsa. O recurso disponibilizado por meio deste edital de taxa de bancada &eacute; fundamental para viabilizar a apresenta&ccedil;&atilde;o do referido coral, assim como sua participa&ccedil;&atilde;o no Encontro de arte Educadores do Nordeste.</p>
+</td>
+                </tr>
+            
+            
+            
+                <tr>
+                    <td>Justificativa</td>
+                    <td><p>Os adolescentes e as crian&ccedil;as que frequentam as escolas p&uacute;blicas permanecem ali, no m&aacute;ximo, quatro horas de aulas por dia, durante cinco dias por semana e, com a falta de acompanhamento dos pais no cotidiano, costumam ficar grande per&iacute;odo do dia afastados, tanto dos familiares como de educadores, agravando sua condi&ccedil;&atilde;o de vulnerabilidade social (Souza et al., 2009). Ao mesmo tempo, a deficiente forma&ccedil;&atilde;o escolar adquirida por essas crian&ccedil;as e adolescentes, n&atilde;o gera uma expectativa de melhora social para os mesmos.</p>
+
+<p>O Instituto Mar de Esperan&ccedil;a, fundador do Coral Meninos e Meninas de Lucena, atende, atualmente, a 50 crian&ccedil;as na faixa et&aacute;ria de 6 a 17 anos, totalizando 45 fam&iacute;lias em situa&ccedil;&atilde;o de risco do munic&iacute;pio de Lucena &ndash; PB. Suas a&ccedil;&otilde;es se iniciaram em 2008, organizado pela Pastora Rejane Maria Pinto Azevedo, motivada pela falta de op&ccedil;&otilde;es de atividades para as crian&ccedil;as e jovens em situa&ccedil;&atilde;o de risco da comunidade, aumentando, assim o n&uacute;mero de menores envolvidos com a criminalidade. O coral Meninos e Meninas de Lucena possibilitou aos seus participantes um refor&ccedil;o de sua identidade cultural, social e cidad&atilde;, ampliando a perman&ecirc;ncia dos mesmos na escola, uma vez que s&oacute; participam do coral as crian&ccedil;as e jovens que s&atilde;o ass&iacute;duas na escola. A viv&ecirc;ncia das crian&ccedil;as e jovens envolvidas nas atividades do coral contribue para melhoria no comportamento, bem como no aprendizado e rendimento escolar. Experi&ecirc;ncias como essas merecem ser compartilhadas durante o Encontro de arte Educadores do Nordeste, al&eacute;m de que a pr&oacute;pria apresenta&ccedil;&atilde;o no evento motivar&aacute; as crian&ccedil;as e jovens, elevando sua autoestima e incentivando sua identidade cultural e cidad&atilde;.</p>
+</td>
+                </tr>
+            
+            
+            
+                <tr>
+                    <td>Objetivo Geral</td>
+                    <td><p>Possibilitar o compartilhamento de experi&ecirc;ncias e a apresenta&ccedil;&atilde;o do Coral Meninos e Meninas de Lucena no Encontro de arte Educadores do Nordeste, que ocorrer&aacute; durante o ENEX 2017.</p>
+</td>
+                </tr>
+            
+            
+                <tr>
+                    <td>Metodologia da Execução do Projeto</td>
+                    <td><p>Esse projeto est&aacute; vinculado &agrave;s a&ccedil;&otilde;es do N&uacute;cleo de Extens&atilde;o &ldquo;DE M&Atilde;OS DADAS COM A COMUNIDADE: DESENVOLVENDO A&Ccedil;&Otilde;ES EDUCATIVAS NO MUNIC&Iacute;PIO DE CABEDELO- PB - DEMADC&rdquo;, e ser&aacute; desenvolvido no IFPB, Campus Cabedelo em parceria com o Instituto Mar de Esperan&ccedil;a- I.M.E de Lucena. A ideia &eacute; que o coral Meninos e Meninas de Lucena se apresente na abertura do ENEX 2017 e recepcione o grupo de participantes que ir&aacute; se deslocar &agrave; Lucena pela balsa, al&eacute;m de participarem de um momento de relato de experi&ecirc;ncias, que pode ser antes da pr&oacute;pria apresenta&ccedil;&atilde;o na abertura do evento, ou mesmo, em um momento reservado para isso junto a outros arte educadores, sendo isso definido em conjunto com a organiza&ccedil;&atilde;o do evento.</p>
+
+<p>A metodologia ser&aacute; desenvolvida nas seguintes etapas:</p>
+
+<p>1&ordf; Reuni&atilde;o com o parceiro e a organiza&ccedil;&atilde;o do ENEX 2017 para planejamento das a&ccedil;&otilde;es;</p>
+
+<p>2&ordf; Defini&ccedil;&atilde;o das principais experi&ecirc;ncias a serem compartilhadas durante o evento com elabora&ccedil;&atilde;o de slides para ilustra&ccedil;&atilde;o das mesmas;</p>
+
+<p>3&ordf; Defini&ccedil;&atilde;o das m&uacute;sicas que ser&atilde;o apresentadas tanto na abertura quanto na recep&ccedil;&atilde;o dos participantes do ENEX 2017 que v&atilde;o &agrave; Lucena;</p>
+
+<p>4&ordf; Ensaios das m&uacute;sicas selecionadas;</p>
+
+<p>5&ordf; Aquisi&ccedil;&atilde;o dos materiais necess&aacute;rios &agrave; participa&ccedil;&atilde;o do coral no evento;</p>
+
+<p>6&ordf; Execu&ccedil;&atilde;o das apresenta&ccedil;&otilde;es;</p>
+
+<p>7&ordf; Avalia&ccedil;&atilde;o das apresenta&ccedil;&otilde;es;</p>
+
+<p>8&ordf; Elabora&ccedil;&atilde;o de relat&oacute;rio de presta&ccedil;&atilde;o de contas.</p>
+
+<p>O Coral Meninos e Meninas de Lucena j&aacute; desenvolve uma s&eacute;rie de a&ccedil;&otilde;es documentadas pelos meios de comunica&ccedil;&atilde;o, conforme pode ser verificado por meio dos links abaixo:</p>
+
+<p><u><a href="http://www.areia.pb.gov.br/paraiba-tem-roteiro-turistico-para-30-dias-de-vivencias-e-experiencias-a-cidade-de-areia-e-uma-delas/">http://www.areia.pb.gov.br/paraiba-tem-roteiro-turistico-para-30-dias-de-vivencias-e-experiencias-a-cidade-de-areia-e-uma-delas/</a></u></p>
+
+<p><a href="http://www.rcvips.com.br/onde-comer-em-joao-pessoa-laissa-ronconi-joao-neto/turismo-de-vivencia-e-experiencias-na-praia-de-lucena-pb/">http://www.rcvips.com.br/onde-comer-em-joao-pessoa-laissa-ronconi-joao-neto/turismo-de-vivencia-e-experiencias-na-praia-de-lucena-pb/</a></p>
+
+<p><a href="http://oconciergeonline.com.br/especial-cantando-na-balsa/">http://oconciergeonline.com.br/especial-cantando-na-balsa/</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=nE8COSYfQqU">https://www.youtube.com/watch?v=nE8COSYfQqU</a></p>
+
+<p><u><a href="http://lucenainforma.blogspot.com.br/2014/05/veja-as-fotos-da-apresentacao-do-coral.html">http://lucenainforma.blogspot.com.br/2014/05/veja-as-fotos-da-apresentacao-do-coral.html</a></u></p>
+
+<p>&nbsp;</p>
+</td>
+                </tr>
+            
+            
+                
+                    <tr>
+                        <td>Acompanhamento e Avaliação do Projeto Durante a Execução</td>
+                        <td><p>O acompanhamento das a&ccedil;&otilde;es realizadas no decorrer da execu&ccedil;&atilde;o deste Edital por este N&uacute;cleo ocorrer&aacute; por meio de reuni&otilde;es mensais realizadas com toda a equipe, de forma que sejam discutidas todas as a&ccedil;&otilde;es realizadas e as que est&atilde;o previstas, antecipando problemas potenciais que possam ocorrer e corrigindo poss&iacute;veis falhas encontradas. Tamb&eacute;m, nessas reuni&otilde;es, ser&atilde;o verificados os indicadores de avalia&ccedil;&atilde;o do per&iacute;odo, a saber: 1. A&ccedil;&otilde;es organizadas; 2. Slides preparados; 3. M&uacute;sicas selecionadas e ensaiadas; 4. Cota&ccedil;&atilde;o de pre&ccedil;os realizada; 5. Materiais adquiridos; 6. Apresenta&ccedil;&atilde;o realizada e avaliada; 7. Presta&ccedil;&atilde;o de contas efetivada.</p>
+</td>
+                    </tr>
+                
+            
+            
+                <tr>
+                    
+                        <td>Resultados esperados / Disseminação de resultados</td>
+                    
+                    <td><p>Espera-se, ao final do ENEX 2017, proporcionar o compartilhamento de experi&ecirc;ncias exitosas no Encontro de arte Educadores do Nordeste, a partir da viv&ecirc;ncia da inser&ccedil;&atilde;o da m&uacute;sica na vida das crian&ccedil;as e jovens de Lucena e de suas fam&iacute;lias, que est&atilde;o colhendo os frutos deste projeto. Al&eacute;m disso, espera-se motivar as crian&ccedil;as e jovens por meio das apresenta&ccedil;&otilde;es no evento, elevando sua autoestima e incentivando sua identidade cultural e cidad&atilde;. Quanto a dissemina&ccedil;&atilde;o dos resultados, espera-se divulgar todas as a&ccedil;&otilde;es desenvolvidas por meio das redes sociais onde o N&uacute;cleo j&aacute; se encontra, al&eacute;m de levar a congressos da &aacute;rea de extens&atilde;o esta experi&ecirc;ncia.</p>
+</td>
+                </tr>
+            
+            
+                <tr>
+                    <td>Referências Bibliográficas</td>
+                    
+                        <td><p>Souza , A. C. R.; Melo, M. D. C. G.; Cordeiro, I. C. de A. A cultura como espa&ccedil;o de luta: reflex&otilde;es sobre identidade, capoeira e cidadania. <strong>V ENECULT - Encontro de Estudos Multidisciplinares em Cultura, </strong>27 a 29 de maio de 2009.&nbsp;</p>
+</td>
+                    
+                </tr>
+            
+            
+        </table>
+    </div>
+</div>
+
+    <div class="box " >
+	<h3>Arquivos do Edital</h3>
+    <div>
+        
+            <h4>Arquivo Digitalizado</h4>
+            <ul>
+                <li><a href="/contratos/visualizar_arquivo/14952/">Edital nº 04 2017_ retificado pelo 006 010 011 e 014 2017 PRORIZOMA PROENEX.pdf</a></li>
+            </ul>
+        
+        <h4>Anexos</h4>
+        
+            <ul>
+                
+                    
+                       <li><a href="/projetos/visualizar_arquivo_word/17631/">ANEXOI-Ficha de Registro das atividades de extensão com experiência da equipe.doc</a> - </li>
+                    
+                
+                    
+                       <li><a href="/projetos/visualizar_arquivo_word/14954/">ANEXOII-TermodeCompromissodoServidorProponente (1).doc</a> - </li>
+                    
+                
+                    
+                       <li><a href="/projetos/visualizar_arquivo_word/14955/">ANEXOIII-DeclaracaodoSetordeRecursosHumanos.doc</a> - </li>
+                    
+                
+                    
+                       <li><a href="/projetos/visualizar_arquivo_word/14956/">ANEXOIV-TermodeAdesaoaoServicoVoluntario.doc</a> - </li>
+                    
+                
+                    
+                       <li><a href="/projetos/visualizar_arquivo_word/14957/">ANEXOV-DeclaracaodeFomentoCaptado (1).docx</a> - </li>
+                    
+                
+            </ul>
+        
+    </div>
+</div>
+</div>
+
+
+<div class="tab" data-title="Caracterização dos Beneficiários">
+    
+        
+        
+            <table>
+                <thead>
+                    <tr>
+                         
+                        <th>Público Alvo</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            
+                            <td>Organizações Não-governamentais</td>
+                            <td>52</td>
+                        </tr>
+                    
+                        <tr>
+                            
+                            <td>Público Interno do Instituto</td>
+                            <td>500</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        
+    
+</div>
+
+
+
+    <div class="tab" data-title="Equipe">
+        <div class="box " >
+	<h3>Equipe</h3>
+    <div>
+            
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ações</th>
+                            <th>Membro da Equipe</th>
+                            <th>Categoria/Titulação</th>
+                            <th>Bolsista</th>
+                            <th>Coordenador</th>
+                            <th>Papel</th>
+                            <th>Carga Horária</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11279/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Luciana Trigueiro de Andrade
+                                            
+                                            
+                                                (<a href="/rh/servidor/2339902/">2339902</a>)</dd>
+                                            
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>DOCENTE (DOUTORADO)</td>
+                                    
+                                        <td> <span class="status status-error">Não</span> </td>
+                                    
+                                    <td> <span class="status status-error">Não</span> </td>
+                                    <td> Extensionista </td>
+                                    <td>2 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11279/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11278/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Maria de Fatima Alves Figueiredo de Lacerda
+                                            
+                                            
+                                                (<a href="/rh/servidor/1099779/">1099779</a>)</dd>
+                                            
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>DOCENTE (MESTRE+RSC-III (LEI 12772/12 ART 18))</td>
+                                    
+                                        <td> <span class="status status-error">Não</span> </td>
+                                    
+                                    <td> <span class="status status-error">Não</span> </td>
+                                    <td> Extensionista </td>
+                                    <td>2 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11278/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11277/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Evelin Sarmento de Carvalho
+                                            
+                                            
+                                                (<a href="/rh/servidor/1810095/">1810095</a>)</dd>
+                                            
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>TÉCNICO-ADMINISTRATIVO (ESPECIALIZACAO NIVEL SUPERIOR)</td>
+                                    
+                                        <td> <span class="status status-error">Não</span> </td>
+                                    
+                                    <td> <span class="status status-error">Não</span> </td>
+                                    <td> Colaborador </td>
+                                    <td>2 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11277/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11276/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Necy Nascimento Matias
+                                            
+                                            
+                                                (<a href="/edu/aluno/20141713004/">20141713004</a>)</dd>
+                                            
+                                            
+                                                <dt>Coeficiente de Rendimento Escolar:</dt><dd>73.59</dd>
+                                                
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>DISCENTE</td>
+                                    
+                                        <td> <span class="status status-error">Não</span> </td>
+                                    
+                                    <td> <span class="status status-error">Não</span> </td>
+                                    <td> Colaborador </td>
+                                    <td>2 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11276/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11275/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Elizeth Ribeiro Nascimento
+                                            
+                                            
+                                                (<a href="/edu/aluno/20101711011/">20101711011</a>)</dd>
+                                            
+                                            
+                                                <dt>Coeficiente de Rendimento Escolar:</dt><dd>79.67</dd>
+                                                
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>DISCENTE</td>
+                                    
+                                        <td> <span class="status status-error">Não</span> </td>
+                                    
+                                    <td> <span class="status status-error">Não</span> </td>
+                                    <td> Colaborador </td>
+                                    <td>2 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11275/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <ul class="list-display-icons">
+                                            <li><a href="/projetos/historico_equipe/11274/" class="popup icon-search" title="Visualizar">Visualizar</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <dl>
+                                            <dt>Nome:</dt>
+                                            
+                                                <dd>Lenietti Galiza Gama
+                                            
+                                            
+                                                (<a href="/rh/servidor/1750521/">1750521</a>)</dd>
+                                            
+                                            
+                                        </dl>
+                                    </td>
+                                    <td>TÉCNICO-ADMINISTRATIVO (MESTRADO)</td>
+                                    
+                                        <td> <span class="status status-success">Sim</span>
+                                        </td>
+                                    
+                                    <td> <span class="status status-success">Sim</span> </td>
+                                    <td> <span>---</span> </td>
+                                    <td>4 h/s</td>
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                            
+                                            <li><a href="/projetos/plano_trabalho_participante/2848/11274/">Ver Plano de Trabalho</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
+                    </tbody>
+                </table>
+            
+        </div>
+</div>
+    </div>
+
+
+    <div class="tab" data-title="Metas/Atividades">
+
+
+    
+
+    
+        
+            <div class="box " >
+	<h3>Meta 1 <span class='italico'>  - 02/05/17 até 25/08/17 </span></h3>
+    <div>
+                
+
+                <h4>Descrição da Meta</h4>+
+                <p>Planejamento das ações</p>
+
+                <h5>Atividades</h5>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Ações</th>
+                                <th rowspan="2">Ordem</th>
+                                
+                                    <th colspan="5">Planejado</th>
+                                
+                                <th colspan="5">Executado</th>
+                            </tr>
+                            <tr>
+                                <th>Descrição</th>
+                                
+                                    <th>Unidade de Medida</th>
+                                    <th>Qtd.</th>
+                                
+                                <th>Período</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Ação</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Observação</th>
+                                <th>Qtd.</th>
+                                <th>Período</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>1</td>
+                                    <td>
+                                        Reunião com o parceiro e a organização do ENEX 2017 para planejamento das ações
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Maria de Fatima Alves Figueiredo de Lacerda</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Reunião</td>
+                                        <td class="align-center">1</td>
+                                    
+                                    <td>De 02/05/2017 até 31/05/2017</td>
+                                    <td>Ações planejadas
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>2</td>
+                                    <td>
+                                        Definição das principais experiências a serem compartilhadas durante o evento com elaboração de slides para ilustração das mesmas
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Luciana Trigueiro de Andrade</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Apresentação em slides</td>
+                                        <td class="align-center">1</td>
+                                    
+                                    <td>De 01/06/2017 até 04/07/2017</td>
+                                    <td>Slides elaborados
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>3</td>
+                                    <td>
+                                        Definição das músicas que serão apresentadas tanto na abertura quanto na recepção dos participantes do ENEX 2017 que vão à Lucena
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Luciana Trigueiro de Andrade</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Músicas</td>
+                                        <td class="align-center">6</td>
+                                    
+                                    <td>De 29/05/2017 até 17/06/2017</td>
+                                    <td>Músicas selecionadas
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>4</td>
+                                    <td>
+                                        Ensaios das músicas selecionadas
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Lenietti Galiza Gama</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Ensaio</td>
+                                        <td class="align-center">10</td>
+                                    
+                                    <td>De 19/06/2017 até 25/08/2017</td>
+                                    <td>Ensaios realizados
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                
+            </div>
+</div>
+        
+            <div class="box " >
+	<h3>Meta 2 <span class='italico'>  - 01/06/17 até 28/08/17 </span></h3>
+    <div>
+                
+
+                <h4>Descrição da Meta</h4>+
+                <p>Execução das apresentações</p>
+
+                <h5>Atividades</h5>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Ações</th>
+                                <th rowspan="2">Ordem</th>
+                                
+                                    <th colspan="5">Planejado</th>
+                                
+                                <th colspan="5">Executado</th>
+                            </tr>
+                            <tr>
+                                <th>Descrição</th>
+                                
+                                    <th>Unidade de Medida</th>
+                                    <th>Qtd.</th>
+                                
+                                <th>Período</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Ação</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Observação</th>
+                                <th>Qtd.</th>
+                                <th>Período</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>1</td>
+                                    <td>
+                                        Realização de cotação de preços dos materiais a serem adquiridos para as apresentações
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Lenietti Galiza Gama</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Cotação</td>
+                                        <td class="align-center">3</td>
+                                    
+                                    <td>De 01/06/2017 até 31/07/2017</td>
+                                    <td>Cotações realizadas
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>2</td>
+                                    <td>
+                                        Aquisição dos materiais necessários à participação do coral no evento
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Lenietti Galiza Gama</p>
+                                        
+                                    </td>
+                                    
+                                        <td>material </td>
+                                        <td class="align-center">50</td>
+                                    
+                                    <td>De 01/08/2017 até 22/08/2017</td>
+                                    <td>Materiais adquiridos para as 50 crianças que participarão das apresentações.
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>3</td>
+                                    <td>
+                                        Execução das apresentações
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Maria de Fatima Alves Figueiredo de Lacerda</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Apresentação</td>
+                                        <td class="align-center">3</td>
+                                    
+                                    <td>De 26/08/2017 até 28/08/2017</td>
+                                    <td>Apresentações do coral e do relato de experiências realizado
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                
+            </div>
+</div>
+        
+            <div class="box " >
+	<h3>Meta 3 <span class='italico'>  - 01/09/17 até 30/11/17 </span></h3>
+    <div>
+                
+
+                <h4>Descrição da Meta</h4>+
+                <p>Ações pós apresentações</p>
+
+                <h5>Atividades</h5>
+                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Ações</th>
+                                <th rowspan="2">Ordem</th>
+                                
+                                    <th colspan="5">Planejado</th>
+                                
+                                <th colspan="5">Executado</th>
+                            </tr>
+                            <tr>
+                                <th>Descrição</th>
+                                
+                                    <th>Unidade de Medida</th>
+                                    <th>Qtd.</th>
+                                
+                                <th>Período</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Ação</th>
+                                
+                                    <th>Indicador Qualitativo</th>
+                                
+                                <th>Observação</th>
+                                <th>Qtd.</th>
+                                <th>Período</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>1</td>
+                                    <td>
+                                        Avaliação das apresentações
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Maria de Fatima Alves Figueiredo de Lacerda</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Reunião</td>
+                                        <td class="align-center">1</td>
+                                    
+                                    <td>De 01/09/2017 até 07/10/2017</td>
+                                    <td>Avaliação dos pontos positivos e negativos das apresentações
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                                <tr>
+                                    
+                                        <td>
+                                            <ul class="list-display-icons">
+                                                
+                                                    <li>-</li>
+                                                
+                                            </ul>
+                                        </td>
+                                    
+                                    <td>2</td>
+                                    <td>
+                                        Elaboração de relatório de prestação de contas
+                                        
+                                        
+                                            <p><strong>Responsável:</strong> Lenietti Galiza Gama</p>
+                                        
+                                    </td>
+                                    
+                                        <td>Relatório </td>
+                                        <td class="align-center">1</td>
+                                    
+                                    <td>De 09/10/2017 até 30/11/2017</td>
+                                    <td>Relatório elaborado e inserido no SUAP
+                                    <td>
+                                        
+
+                                        
+                                        
+                                            
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                       <td>
+                                           
+                                       </td>
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                    
+                                        <td class="align-center">-</td>
+                                    
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                
+            </div>
+</div>
+        
+    
+</div>
+
+    <div class="tab" data-title="Plano de Aplicação">
+        
+            
+            <div class="box " >
+	<h3>Demonstrativo do Plano de Aplicação/Memória de Cálculo e Desembolso</h3>
+    <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Elemento de Despesa</th>
+                            <th rowspan="2">Valor Reservado <span>Edital</span></th>
+                            <th class="align-center" colspan="3">Previsão</th>
+                            <th class="align-center" colspan="2">Execução</th>
+                        </tr>
+                            <th>Valor Planejado <span>Memória de Cálculo (A)</span></th>
+                            <th>Valor Distribuído <span>Plano de Desembolso (B)</span></th>
+                            <th>Valor Disponível <span>Planejamento (A-B)</span></th>
+                            <th>Valor Executado <span>Desembolso (C)</span></th>
+                            <th>Valor Disponível <span>Execução (B-C)</span></th>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>339020 -  Auxílio Financeiro a Pesquisadores </td>
+                                <td class="align-right">60.000,00</td>
+                                
+                                    <td class="align-right true">2.000,00</td>
+                                
+                                <td class="align-right">2.000,00</td>
+                                <td class="align-right True">0,00</td>
+                                <td class="align-right">0,0</td>
+                                <td class="align-right">2.000,00</td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+</div>
+        
+
+        <div class="box " >
+	<h3>Memória de Cálculo</h3>
+    <div>
+            
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ações</th>
+                            <th>Despesa</th>
+                            <th>Descrição</th>
+                            <th>Unidade de Medida</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário (R$)</th>
+                            <th>Total Orçado (R$)</th>
+                            <th>Total Executado (R$)</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <ul class="list-display-icons">
+                                                <li> - </li>
+                                            </ul>
+                                
+                                </td>
+
+
+                                <td>339020 -  Auxílio Financeiro a Pesquisadores </td>
+                                <td>Materiais para a apresentação</td>
+                                <td>material </td>
+                                <td>50</td>
+                                <td class="align-right">40,00</td>
+                                <td class="align-right">2.000,00</td>
+                                <td class="align-right">0,0</td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            
+        </div>
+</div>
+    </div>
+
+    <div class="tab" data-title="Plano de Desembolso">
+        <div class="box " >
+	<h3>Plano de Desembolso</h3>
+    <div>
+
+            
+
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ações</th>
+                            <th>Memória de Cálculo</th>
+                            <th>Ano</th>
+                            <th>Mês</th>
+                            <th>Valor</th>
+                            <th>Valor Executado</th>
+                            <th>Valor Disponível</th>
+                            
+                                <th>Opções</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>
+                                    
+                                         <ul class="list-display-icons">
+                                            <li> - </li>
+                                        </ul>
+                                    
+                                </td>
+                                <td>339020 -  Auxílio Financeiro a Pesquisadores  - Materiais para a apresentação</td>
+                                <td>2017</td>
+                                <td>1</td>
+                                <td class="align-right">2.000,00</td>
+                                <td class="align-right">0,00</td>
+                                <td class="align-right">2.000,00</td>
+                                
+                                    <td>
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/projetos/registro_gasto/790114/">Visualizar Gasto</a></li>
+                                            
+                                        </ul>
+                                    </td>
+                                
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            
+        </div>
+</div>
+    </div>
+
+
+<div class="tab" data-title="Anexos">
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome e Descrição do Arquivo</th>
+                    <th>Arquivo Digitalizado</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    
+                        <tr>
+                            <td>
+                                <p>ANEXO I - Ficha de registro de atividade de extensão</p>
+                                <p></p>
+                            </td>
+                            <td>
+                            
+                                <a href="/projetos/visualizar_arquivo/17219/">anexo1.pdf</a>
+                            
+                            </td>
+                        </tr>
+                    
+                
+                    
+                        <tr>
+                            <td>
+                                <p>ANEXO II - Termo de Compromisso do Servidor Proponente</p>
+                                <p></p>
+                            </td>
+                            <td>
+                            
+                                <a href="/projetos/visualizar_arquivo/17218/">anexo2.pdf</a>
+                            
+                            </td>
+                        </tr>
+                    
+                
+                    
+                        <tr>
+                            <td>
+                                <p>ANEXO IV - Termo de Adesão ao Serviço Voluntário </p>
+                                <p></p>
+                            </td>
+                            <td>
+                            
+                                <a href="/projetos/visualizar_arquivo/17217/">anexo 6.pdf</a>
+                            
+                            </td>
+                        </tr>
+                    
+                
+                    
+                        <tr>
+                            <td>
+                                <p>ANEXO V - Declaração de Fomento Captado</p>
+                                <p></p>
+                            </td>
+                            <td>
+                            
+                                <span class="status status-alert">Aguardando submissão do arquivo</span>
+                            
+                            </td>
+                        </tr>
+                    
+                
+                    
+                        <tr>
+                            <td>
+                                <p>	ANEXO III - Declaração do Setor de Recursos Humanos	ANEXO III - Declaração do Setor de Recursos Humanos</p>
+                                <p></p>
+                            </td>
+                            <td>
+                            
+                                <span class="status status-alert">Aguardando submissão do arquivo</span>
+                            
+                            </td>
+                        </tr>
+                    
+                
+            </tbody>
+        </table>
+    
+</div>
+
+
+
+
+    <div class="tab" data-title="Fotos">
+        
+
+        
+            <p class="msg alert">Nenhuma foto foi enviada.</p>
+        
+    </div>
+
+
+
+    <div class="tab" data-title="Documentos">
+        
+        
+            <p class="msg alert">Nenhum documento foi enviado.</p>
+        
+    </div>
+
+
+
+    <div class="tab" data-title="Conclusão">
+        <ul class="action-bar">
+                       
+            
+        </ul>
+        
+            <p class="msg alert">Nenhum registro de conclusão cadastrado até o momento.</p>
+        
+    </div>
+
+
+
+    <div class="tab" data-title="Dados da Seleção">
+        
+            <table>
+                <thead>
+                    <tr>
+                            
+                        <th>Pontuação</th>
+                        <th>Parecer</th>
+                        <th>Data da Avaliação</th>
+                        
+                        <th>Ficha de Avaliação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        
+                        <td>96,00</td>
+                        <td>Proposta relevante e bem articulada para as ações de extensão. Aprovado.</td>
+                        <td>17/05/2017 16:50</td>
+                        
+                        <td> <a href="/projetos/visualizar_ficha_avaliacao/1244/" class="btn popup" title="Ver Ficha"> Ver Ficha</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        
+    </div>
+
+
+
+	
+</div>
+
+        
+        <div class="action-links">
+            <ul>
+                <li class="float-right">
+                    <a href="#" id="topodapagina">Topo da página</a>
+                </li>
+                <li class="float-right action-print">
+                    <a href="#">Imprimir</a>
+                </li>
+                
+            </ul>
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    <ul>
+        <li>
+            Administração
+            <p><a href="mailto:suap@ifpb.edu.br">suap@ifpb.edu.br</a></p>
+        </li>
+        <li>
+            Desenvolvimento
+            <p><a href="http://portal.ifrn.edu.br">IFRN</a> / <a href="http://portal.ifpb.edu.br">IFPB</a></p>
+        </li>
+        <li class="float-right">
+            <a href="http://www.djangoproject.com/"><img src="/static/comum/img/django.gif" alt="Feito com Django" /></a>
+        </li>
+    </ul>
+    
+</footer>
+
+
+
+<script>
+    open_menu_item("meus-projetos-100");
+    $(window).unload(function(){
+        $('input[type=submit]').removeAttr('disabled');
+    });
+
+    
+        $("input[type=submit]").not(".confirm, .danger").on("click", function() {
+            var elem = $(this);
+            var form = $(this.form);
+
+            //Se tiver a função checkValidity verificar se está tudo ok, nas validações html5, para não desabilitar o botão de submit
+            if(typeof form[0].checkValidity === 'function') {
+                if (form[0].checkValidity()) {
+                    elem.parent().find("input[type=submit]").attr("disabled", "disabled");
+                    elem.val("Aguarde...");
+                }
+            } else {
+                elem.parent().find("input[type=submit]").attr("disabled", "disabled");
+                elem.val("Aguarde...");
+            }
+
+            if (elem.attr("name")) {
+                elem.parent().append('<input type="hidden" name="'+elem.attr("name")+'" value="'+elem.val()+'" />');
+            }
+
+            form.find(".selector-chosen select[multiple] option").attr("selected", "selected");
+            form.submit();
+        });
+    
+</script>
+</body>
+</html>

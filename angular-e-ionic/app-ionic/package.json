@@ -1,0 +1,27 @@
+{
+  "name": "myfirstapp",
+  "version": "1.1.1",
+  "description": "MyFirstApp: An Ionic project",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-device",
+    "cordova-plugin-console"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  </head>
+  <body ng-app="my-app">
+        <!-- alo mundo -->
+        <div ng-controller="aloMundoController">
+            <input type="text" value="" ng-model="personName">
+            <h1>Alo, {{personName}}</h1>
+            <!-- directive: myDirective -->
+            <my-directive my-attr="{{personName}}"></my-directive>
+            <div my-directive my-attr="{{personName}}"></div>
+        </div>
+        <!-- calculadora -->
+        <div ng-controller="calculadoraController">
+            <input type="number" ng-model="operator1">
+            <input type="number" ng-model="operator2">
+            <button type="button" ng-click="add()">+</button>
+            <button type="button" ng-click="sub()">-</button>
+            <input type="text" value="{{result | myFilter}}">
+        </div>
+        <!-- calculadora -->
+        <div ng-controller="personController">
+            <button ng-click="load()">Carregar dados</button>
+            <div>{{person.id + ' / ' + person.name}}</div>
+        </div>
+
+        <!-- carregar o angular -->
+        <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
