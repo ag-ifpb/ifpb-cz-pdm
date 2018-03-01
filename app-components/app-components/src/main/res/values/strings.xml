@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="helo">Hello World!</string>
+    <string name="title_activity_detail">DetailActivity Title</string>
+</resources>
