@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">app-isconnected</string>
+    <!-- my strings -->
+    <string name="with_connection">com conexão</string>
+    <string name="without_connection">sem conexão</string>
+    <string name="start_service">iniciar o serviço</string>
+    <string name="stop_service">finalizar o serviço</string>
+</resources>

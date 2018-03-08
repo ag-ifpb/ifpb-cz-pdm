@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textDefaultSize">24sp</dimen>
+    <dimen name="iconSize">24dp</dimen>
+    <dimen name="buttonWidth">200dp</dimen>
+</resources>
