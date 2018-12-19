@@ -3,23 +3,18 @@ package br.edu.ifpb.app_isconnected;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 public class MainActivity extends AppCompatActivity {
 
-    private void markAsConnected(){
+    private void markAsConnected() {
         //recuperar os elementos da visão
         ImageView img = (ImageView) findViewById(R.id.img);
         TextView txt = (TextView) findViewById(R.id.text);
@@ -29,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         txt.setTextColor(getResources().getColor(R.color.colorIconTextGreen));
     }
 
-    private void markAsDisconnected(){
+    private void markAsDisconnected() {
         //recuperar os elementos da visão
         ImageView img = (ImageView) findViewById(R.id.img);
         TextView txt = (TextView) findViewById(R.id.text);
@@ -65,20 +60,22 @@ public class MainActivity extends AppCompatActivity {
         Button btStartService = (Button) findViewById(R.id.btStartService);
         Button btStopService = (Button) findViewById(R.id.btStopService);
         //
-        btStartService.setOnClickListener(new Button.OnClickListener(){
+        btStartService.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startService(new Intent(MainActivity.this, CheckingInternetService.class));
             }
         });
         //
-        btStopService.setOnClickListener(new Button.OnClickListener(){
+        btStopService.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stopService(new Intent(MainActivity.this, CheckingInternetService.class));
             }
         });
-
+        //
+        MyDBSQLiteHelper helper = new MyDBSQLiteHelper(this);
+        Log.d("AGDebug", "Banco de dados criado: " + helper.getReadableDatabase().getPath());
     }
 
     @Override

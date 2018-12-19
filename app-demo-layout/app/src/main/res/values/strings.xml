@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Temp</string>
+    <string name="hm1">Alô Mundo - modificado #1</string>
+    <string name="hm2">Alô Mundo - modificado #2</string>
+    <string name="btn_name">Acionar</string>
+</resources>

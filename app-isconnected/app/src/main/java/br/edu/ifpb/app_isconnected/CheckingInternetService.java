@@ -11,22 +11,23 @@ import java.net.URL;
 
 public class CheckingInternetService extends IntentService {
 
-    private boolean checkInternet(){
+    public CheckingInternetService() {
+        super("CheckingInternetService");
+    }
+
+    private boolean checkInternet() {
         try {
-            URL url  = new URL("http://uol.com.br");
-            HttpURLConnection conn =  (HttpURLConnection) url.openConnection();
+            URL url = new URL("http://uol.com.br");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("HEAD");
             String contentType = conn.getContentType();
             if (contentType != null && !"".equals(contentType)) {
                 return true;
             }
-        } catch (IOException e) {}
+        } catch (IOException e) {
+        }
         //
         return false;
-    }
-
-    public CheckingInternetService() {
-        super("CheckingInternetService");
     }
 
     @Override

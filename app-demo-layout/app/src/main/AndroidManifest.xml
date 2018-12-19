@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="br.edu.ifpb.app_isconnected">
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+          package="ag.ifpb.temp">
 
     <application
         android:allowBackup="true"
@@ -14,25 +12,10 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".CheckingInternetService"
-            android:exported="false">
-        </service>
-
-        <receiver
-            android:name=".WithConnectionReceiver"
-            android:enabled="false"
-            android:exported="false">
-        </receiver>
-        <receiver
-            android:name=".WithoutConnectionReceiver"
-            android:enabled="true"
-            android:exported="true">
-        </receiver>
     </application>
 
 </manifest>
